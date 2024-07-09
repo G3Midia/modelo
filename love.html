@@ -1,52 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mensagem de Amor</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #FFD1DC; /* Fundo rosê */
+            background-image: url('https://i.imgur.com/1ABFyLg.png'); /* Corações */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
         }
-
         .container {
             text-align: center;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            width: 50%;
+            margin-bottom: 40px;
+        @media (max-width: 768px) {
+            width: 90%;
         }
-
-        .container img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
+        }
+        .message-block {
+            display: none;
+            background-color: white;
+            padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        .message-block img {
+            width: 200px;
+            border-radius: 20px;
             margin-bottom: 20px;
         }
-
-        .container p {
-            font-size: 1.5em;
-            color: #333;
+        button {
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
         }
-
-        @media (max-width: 600px) {
-            .container p {
-                font-size: 1.2em;
-            }
+        button:hover {
+            background-color: #FF1493;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <p>Eu te amo. Você é tudo para mim ♥</p>
-      <img src="imagens/20221023104444_IMG_1086.jpg" alt="Imagem de Amor">
+        <h1>Mensagem para o amor da minha vida</h1>
+        <button onclick="toggleMessage()">Clique para ver a mensagem</button>
+        <div class="message-block" id="message-block">
+            <img src="imagens/imagem.jpg.jpg" alt="Foto da Amada">
+            <p>Meu amor,</p>
+            <p>Você é a razão do meu viver, a luz que me ilumina, a música que dá ritmo à minha vida, o arco-íris que dá cor aos meus dias, você é a chama que aquece o meu coração, o sonho que se tornou realidade, a essência do meu ser, a âncora que me mantém firme, você é o meu tesouro escondido, a pessoa que quero passar todos os dias da minha vida, eu te amo para sempre ♥</p>
+            <p>Com todo amor,</p>
+            <p>Seu Gatão, Geovane</p>
+        </div>
     </div>
+
+    <script>
+        function toggleMessage() {
+            var messageBlock = document.getElementById('message-block');
+            if (messageBlock.style.display === 'none' || messageBlock.style.display === '') {
+                messageBlock.style.display = 'block';
+            } else {
+                messageBlock.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
